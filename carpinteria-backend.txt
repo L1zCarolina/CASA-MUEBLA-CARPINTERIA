@@ -1,0 +1,19 @@
+carpinteria-backend/
+│
+├── controllers/
+│   ├── auth.controller.js
+│   └── productos.controller.js
+├── db/
+│   └── db.js
+├── middleware/
+│   └── auth.middleware.js
+├── models/
+│   └── user.models.js
+├── routers/
+│   ├── auth.router.js
+│   └── productos.router.js
+├── uploads/
+├── .env
+├── .gitignore
+├── index.js
+└── package.json

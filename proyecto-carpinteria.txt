@@ -1,0 +1,13 @@
+proyecto-carpinteria/
+│
+├── index.html
+├── productos.html
+├── servicios.html
+├── contacto.html
+├── nosotros.html
+├── css/
+│   └── estilos.css
+├── js/
+│   └── script.js
+└── img/
+    └── (imágenes del sitio)
