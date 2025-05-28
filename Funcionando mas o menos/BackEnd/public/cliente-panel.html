@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <!-- Enlace a la biblioteca de iconos de FontAwesome -->
+    <script src="https://kit.fontawesome.com/c499d04190.js" crossorigin="anonymous"></script>
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Casa Muebla Carpintería - Área de Cliente</title>
+</head>
+<body>
+    <!-- Contenedor para mensajes de error -->
+    <div id="mensaje-container" class="mensaje-error"></div>
+
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu siderbarOpen'></i>
+                <span class="logo navLogo"><img src="./images/logo sin fondo.png" alt="">
+                </span>
+            
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><img src="./images/logo sin fondo.png" alt=""><a href="./index.html"></a>
+                        </span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+    
+                    <ul class="nav-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./mi-cuenta.html">Mi Cuenta</a></li>
+                    </ul>
+                </div>
+    
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+    
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Buscar...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner del Área de Cliente -->
+    <section class="banner-cuenta">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Mi Cuenta</h1>
+            <p id="banner-subtitle">Bienvenido a tu área personal</p>
+        </div>
+    </section>
+
+    <!-- Panel de Cliente -->
+    <section id="panel-cliente" class="panel-cliente">
+        <div class="container__panel container__card-primary div__offset">
+            <div class="panel-content card__primary">
+                <div class="panel-header">
+                    <div class="text__panel text__card-primary">
+                        <p>ÁREA DE CLIENTE</p>
+                        <h1>Mi Cuenta</h1>
+                    </div>
+                    <div id="nombre-usuario-container">
+                        Bienvenido, <span id="nombre-usuario"></span>
+                    </div>
+                    <button id="btn-logout" class="boton-logout">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </button>
+                </div>
+                
+                <!-- Menú de navegación del panel de cliente -->
+                <div class="panel-nav">
+                    <button class="panel-nav-btn active" data-section="perfil">
+                        <i class="fas fa-user"></i> Mi Perfil
+                    </button>
+                    <button class="panel-nav-btn" data-section="pedidos-cliente">
+                        <i class="fas fa-shopping-cart"></i> Mis Pedidos
+                    </button>
+                    <button class="panel-nav-btn" data-section="favoritos">
+                        <i class="fas fa-heart"></i> Favoritos
+                    </button>
+                    <button class="panel-nav-btn" data-section="cotizaciones">
+                        <i class="fas fa-file-invoice-dollar"></i> Cotizaciones
+                    </button>
+                </div>
+                
+                <!-- Contenido de las secciones -->
+                <div class="panel-sections">
+                    <!-- Mi Perfil -->
+                    <div class="panel-section active" id="perfil">
+                        <h2>Mi Perfil</h2>
+                        <div class="perfil-container">
+                            <div class="perfil-info">
+                                <div class="perfil-avatar">
+                                    <img src="./images/cuenta/avatar-default.jpg" alt="Avatar de usuario">
+                                    <button class="cambiar-avatar">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="perfil-detalles">
+                                    <h3 id="nombre-cliente">Juan Pérez</h3>
+                                    <p id="email-cliente">juan@ejemplo.com</p>
+                                    <p id="telefono-cliente">123-456-7890</p>
+                                    <p id="fecha-registro">Cliente desde: 15/03/2024</p>
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-editar">
+                                <h3>Editar Información Personal</h3>
+                                <form id="form-editar-perfil" class="panel-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="editar-nombre">Nombre:</label>
+                                            <input type="text" id="editar-nombre" name="nombre" value="Juan" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editar-apellido">Apellido:</label>
+                                            <input type="text" id="editar-apellido" name="apellido" value="Pérez" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="editar-email">Email:</label>
+                                        <input type="email" id="editar-email" name="email" value="juan@ejemplo.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="editar-telefono">Teléfono:</label>
+                                        <input type="tel" id="editar-telefono" name="telefono" value="123-456-7890" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="editar-direccion">Dirección:</label>
+                                        <input type="text" id="editar-direccion" name="direccion" value="Calle Principal 123" required>
+                                    </div>
+                                    <button type="submit" class="boton-panel">Guardar Cambios</button>
+                                </form>
+                                
+                                <h3>Cambiar Contraseña</h3>
+                                <form id="form-cambiar-password" class="panel-form">
+                                    <div class="form-group">
+                                        <label for="password-actual">Contraseña Actual:</label>
+                                        <input type="password" id="password-actual" name="password_actual" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password-nueva">Nueva Contraseña:</label>
+                                        <input type="password" id="password-nueva" name="password_nueva" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password-confirmar">Confirmar Contraseña:</label>
+                                        <input type="password" id="password-confirmar" name="password_confirmar" required>
+                                    </div>
+                                    <button type="submit" class="boton-panel">Cambiar Contraseña</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mis Pedidos -->
+                    <div class="panel-section" id="pedidos-cliente">
+                        <h2>Mis Pedidos</h2>
+                        <div class="pedidos-filtro">
+                            <select id="filtro-estado" class="filtro-select">
+                                <option value="todos">Todos los pedidos</option>
+                                <option value="pendiente">Pendientes</option>
+                                <option value="en_proceso">En proceso</option>
+                                <option value="completado">Completados</option>
+                                <option value="cancelado">Cancelados</option>
+                            </select>
+                            <div class="buscar-pedido">
+                                <input type="text" id="buscar-pedido" placeholder="Buscar pedido...">
+                                <button class="btn-buscar"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="pedidos-lista">
+                            <div class="pedido-item">
+                                <div class="pedido-header">
+                                    <div class="pedido-info">
+                                        <span class="pedido-id">#1234</span>
+                                        <span class="pedido-fecha">15/03/2024</span>
+                                    </div>
+                                    <div class="pedido-estado pendiente">Pendiente</div>
+                                </div>
+                                <div class="pedido-productos">
+                                    <div class="producto-item">
+                                        <img src="./images/productos/mesa-roble.jpg" alt="Mesa de Roble">
+                                        <div class="producto-info">
+                                            <h4>Mesa de Roble</h4>
+                                            <p>Cantidad: 1</p>
+                                            <p>Precio: $1,200.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="producto-item">
+                                        <img src="./images/productos/silla-moderna.jpg" alt="Silla Moderna">
+                                        <div class="producto-info">
+                                            <h4>Silla Moderna</h4>
+                                            <p>Cantidad: 2</p>
+                                            <p>Precio: $350.00 c/u</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pedido-footer">
+                                    <div class="pedido-total">
+                                        <span>Total:</span>
+                                        <span class="precio">$1,900.00</span>
+                                    </div>
+                                    <div class="pedido-acciones">
+                                        <button class="btn-ver-detalles">Ver Detalles</button>
+                                        <button class="btn-cancelar">Cancelar Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="pedido-item">
+                                <div class="pedido-header">
+                                    <div class="pedido-info">
+                                        <span class="pedido-id">#1233</span>
+                                        <span class="pedido-fecha">10/03/2024</span>
+                                    </div>
+                                    <div class="pedido-estado completado">Completado</div>
+                                </div>
+                                <div class="pedido-productos">
+                                    <div class="producto-item">
+                                        <img src="./images/productos/armario-empotrado.jpg" alt="Armario Empotrado">
+                                        <div class="producto-info">
+                                            <h4>Armario Empotrado</h4>
+                                            <p>Cantidad: 1</p>
+                                            <p>Precio: $2,500.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pedido-footer">
+                                    <div class="pedido-total">
+                                        <span>Total:</span>
+                                        <span class="precio">$2,500.00</span>
+                                    </div>
+                                    <div class="pedido-acciones">
+                                        <button class="btn-ver-detalles">Ver Detalles</button>
+                                        <button class="btn-valorar">Valorar Productos</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Favoritos -->
+                    <div class="panel-section" id="favoritos">
+                        <h2>Mis Productos Favoritos</h2>
+                        <div class="favoritos-lista">
+                            <div class="favorito-item">
+                                <div class="favorito-imagen">
+                                    <img src="./images/productos/mesa-roble.jpg" alt="Mesa de Roble">
+                                    <button class="btn-quitar-favorito"><i class="fas fa-heart"></i></button>
+                                </div>
+                                <div class="favorito-info">
+                                    <h3>Mesa de Roble</h3>
+                                    <p class="favorito-descripcion">Mesa de comedor de roble macizo</p>
+                                    <p class="favorito-precio">$1,200.00</p>
+                                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                                </div>
+                            </div>
+                            
+                            <div class="favorito-item">
+                                <div class="favorito-imagen">
+                                    <img src="images/productos/silla-moderna.jpg" alt="Silla Moderna">
+                                    <button class="btn-quitar-favorito"><i class="fas fa-heart"></i></button>
+                                </div>
+                                <div class="favorito-info">
+                                    <h3>Silla Moderna</h3>
+                                    <p class="favorito-descripcion">Silla de diseño contemporáneo</p>
+                                    <p class="favorito-precio">$350.00</p>
+                                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                                </div>
+                            </div>
+                            
+                            <div class="favorito-item">
+                                <div class="favorito-imagen">
+                                    <img src="./images/productos/armario-empotrado.jpg" alt="Armario Empotrado">
+                                    <button class="btn-quitar-favorito"><i class="fas fa-heart"></i></button>
+                                </div>
+                                <div class="favorito-info">
+                                    <h3>Armario Empotrado</h3>
+                                    <p class="favorito-descripcion">Armario a medida para dormitorio</p>
+                                    <p class="favorito-precio">$2,500.00</p>
+                                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cotizaciones -->
+                    <div class="panel-section" id="cotizaciones">
+                        <h2>Mis Cotizaciones</h2>
+                        <div class="cotizaciones-container">
+                            <div class="nueva-cotizacion">
+                                <h3>Solicitar Nueva Cotización</h3>
+                                <form id="form-cotizacion" class="panel-form">
+                                    <div class="form-group">
+                                        <label for="tipo-mueble">Tipo de Mueble:</label>
+                                        <select id="tipo-mueble" name="tipo_mueble" required>
+                                            <option value="">Seleccionar tipo</option>
+                                            <option value="cocina">Mueble de Cocina</option>
+                                            <option value="bano">Mueble de Baño</option>
+                                            <option value="dormitorio">Mueble de Dormitorio</option>
+                                            <option value="oficina">Mueble de Oficina</option>
+                                            <option value="exterior">Mueble de Exterior</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="descripcion-cotizacion">Descripción:</label>
+                                        <textarea id="descripcion-cotizacion" name="descripcion" placeholder="Describe el mueble que necesitas, incluyendo medidas, materiales preferidos, etc." required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="imagen-referencia">Imagen de Referencia (opcional):</label>
+                                        <input type="file" id="imagen-referencia" name="imagen" accept="image/*">
+                                    </div>
+                                    <button type="submit" class="boton-panel">Solicitar Cotización</button>
+                                </form>
+                            </div>
+                            
+                            <div class="cotizaciones-lista">
+                                <h3>Cotizaciones Solicitadas</h3>
+                                <div class="cotizacion-item">
+                                    <div class="cotizacion-header">
+                                        <div class="cotizacion-info">
+                                            <span class="cotizacion-id">#C001</span>
+                                            <span class="cotizacion-fecha">12/03/2024</span>
+                                        </div>
+                                        <div class="cotizacion-estado pendiente">Pendiente</div>
+                                    </div>
+                                    <div class="cotizacion-detalles">
+                                        <h4>Mueble de Cocina</h4>
+                                        <p>Alacena para cocina con puertas de vidrio, en madera de roble, medidas aproximadas 180x60x40 cm.</p>
+                                    </div>
+                                    <div class="cotizacion-acciones">
+                                        <button class="btn-ver-detalles">Ver Detalles</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="cotizacion-item">
+                                    <div class="cotizacion-header">
+                                        <div class="cotizacion-info">
+                                            <span class="cotizacion-id">#C002</span>
+                                            <span class="cotizacion-fecha">05/03/2024</span>
+                                        </div>
+                                        <div class="cotizacion-estado completado">Completada</div>
+                                    </div>
+                                    <div class="cotizacion-detalles">
+                                        <h4>Mueble de Oficina</h4>
+                                        <p>Escritorio en L con cajonera, en melamina color nogal, medidas 160x140x75 cm.</p>
+                                        <div class="cotizacion-precio">
+                                            <span>Precio Cotizado:</span>
+                                            <span class="precio">$1,800.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="cotizacion-acciones">
+                                        <button class="btn-ver-detalles">Ver Detalles</button>
+                                        <button class="btn-aceptar-cotizacion">Aceptar Cotización</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2024 Casa Muebla Carpintería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Script principal -->
+    <script src="./js/script.js"></script>
+    <!-- Script específico para el panel de cliente -->
+    <script src="./js/cliente-panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <!-- Enlace a la biblioteca de iconos de FontAwesome -->
+    <script src="https://kit.fontawesome.com/c499d04190.js" crossorigin="anonymous"></script>
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Casa Muebla Carpintería - Editar Perfil</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu siderbarOpen'></i>
+                <span class="logo navLogo"><img src="./images/logo sin fondo.png" alt="">
+                </span>
+            
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><img src="./images/logo sin fondo.png" alt=""><a href="index.html"></a>
+                        </span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+    
+                    <ul class="nav-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./mi-cuenta.html">Mi Cuenta</a></li>
+                    </ul>
+                </div>
+    
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+    
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Buscar...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner de la página -->
+    <section class="banner-cuenta">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Mi Perfil</h1>
+            <p>Actualiza tu información personal</p>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <section class="editar-perfil-section">
+        <div class="container__card-primary div__offset">
+            <div class="card__primary">
+                <div class="text__card-primary">
+                    <p>PERFIL</p>
+                    <h1>Información Personal</h1>
+                </div>
+                
+                <!-- Mensaje de estado (éxito/error) -->
+                <div id="mensaje-estado" class="mensaje-estado"></div>
+                
+                <!-- Formulario de edición de perfil -->
+                <div class="perfil-container">
+                    <div class="perfil-info">
+                        <div class="perfil-avatar">
+                            <img id="foto-perfil" src="./images/cuenta/avatar-default.jpg" alt="Avatar de usuario">
+                            <label for="foto_perfil" class="cambiar-avatar">
+                                <i class="fas fa-camera"></i>
+                                <input type="file" id="foto_perfil" name="foto_perfil" accept="image/*" style="display: none;">
+                            </label>
+                        </div>
+                        <div class="perfil-detalles">
+                            <h3 id="nombre-usuario">Nombre de Usuario</h3>
+                            <p id="email-usuario">email@ejemplo.com</p>
+                            <p id="rol-usuario">Rol: Cliente</p>
+                        </div>
+                    </div>
+                    
+                    <div class="perfil-editar">
+                        <h3>Editar Información Personal</h3>
+                        <form id="form-editar-perfil" class="panel-form" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="nombre_usuario">Nombre:</label>
+                                <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_usuario">Email:</label>
+                                <input type="email" id="email_usuario" name="email_usuario" required>
+                            </div>
+                            
+                            <!-- Si es un cliente, mostrar campos adicionales -->
+                            <div id="campos-cliente" style="display: none;">
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono:</label>
+                                    <input type="tel" id="telefono" name="telefono">
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccion">Dirección:</label>
+                                    <input type="text" id="direccion" name="direccion">
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="boton-panel">Guardar Cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2024 Casa Muebla Carpintería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Script principal -->
+    <script src="./js/script.js"></script>
+    <!-- Script específico para editar perfil -->
+    <script src="./js/editar-perfil.js"></script>
+</body>
+</html>

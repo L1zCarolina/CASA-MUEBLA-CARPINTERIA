@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <!-- Enlace a la biblioteca de iconos de FontAwesome -->
+    <script src="https://kit.fontawesome.com/c499d04190.js" crossorigin="anonymous"></script>
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Casa Muebla Carpintería - Mi Cuenta</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu siderbarOpen'></i>
+                <span class="logo navLogo"><img src="./images/logo sin fondo.png" alt="">
+                </span>
+            
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><img src="./images/logo sin fondo.png" alt=""><a href="index.html"></a>
+                        </span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+    
+                    <ul class="nav-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./mi-cuenta.html">Mi Cuenta</a></li>
+                    </ul>
+                </div>
+    
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+    
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Buscar...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner de la página Mi Cuenta -->
+    <section class="banner-cuenta">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Mi Cuenta</h1>
+            <p id="banner-subtitle">Accede a tu cuenta para gestionar tus pedidos y más</p>
+        </div>
+    </section>
+
+    <!-- Sección de inicio de sesión (visible cuando no hay sesión) -->
+    <section id="seccion-login" class="cuenta-principal">
+        <div class="container__cuenta container__card-primary div__offset">
+            <div class="cuenta-content card__primary">
+                <div class="text__cuenta text__card-primary">
+                    <p>ÁREA DE USUARIO</p>
+                    <h1>Iniciar Sesión</h1>
+                </div>
+                
+                <div class="login-container">
+                    <div class="login-image">
+                        <img src="./images/cuenta/login-image.jpg" alt="Iniciar Sesión">
+                    </div>
+                    <div class="login-form">
+                        <h2>Acceso al Sistema</h2>
+                        <p>Ingresa tus credenciales para acceder a tu cuenta.</p>
+                        <form id="form-login" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="login-email">Email <span class="required">*</span></label>
+                                <input type="email" id="login-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Contraseña <span class="required">*</span></label>
+                                <div class="password-wrapper">
+                                <input type="password" id="login-password" name="password" required>
+                                <button type="button" class="toggle-password" aria-label="Mostrar contraseña">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="recordar" name="recordar">
+                                <label for="recordar">Recordar mis datos</label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="boton-cuenta">Iniciar Sesión</button>
+                            </div>
+                            <div class="form-links">
+                                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                                <p class="register-link">¿No tienes cuenta? <a href="#" id="mostrar-registro">Regístrate aquí</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de registro (inicialmente oculta) -->
+    <section id="seccion-registro" class="cuenta-principal" style="display: none;">
+        <div class="container__cuenta container__card-primary div__offset">
+            <div class="cuenta-content card__primary">
+                <div class="text__cuenta text__card-primary">
+                    <p>ÁREA DE USUARIO</p>
+                    <h1>Registro de Usuario</h1>
+                </div>
+                
+                <div class="login-container">
+                    <div class="login-image">
+                        <img src="./images/cuenta/register-image.jpg" alt="Registro">
+                    </div>
+                    <div class="login-form">
+                        <h2>Crear una Cuenta</h2>
+                        <p>Completa el formulario para registrarte como cliente.</p>
+                        <!-- Modificar el formulario de registro para incluir subida de foto y selección de rol -->
+                        <form id="form-registro" action="#" method="POST" enctype="multipart/form-data">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="registro-nombre">Nombre <span class="required">*</span></label>
+                                    <input type="text" id="registro-nombre" name="nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registro-apellido">Apellido <span class="required">*</span></label>
+                                    <input type="text" id="registro-apellido" name="apellido" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="registro-email">Email <span class="required">*</span></label>
+                                <input type="email" id="registro-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registro-telefono">Teléfono <span class="required">*</span></label>
+                                <input type="tel" id="registro-telefono" name="telefono" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="registro-foto">Foto de perfil</label>
+                                <input type="file" id="registro-foto" name="foto_perfil" accept="image/*">
+                                <small>Sube una foto para tu perfil (opcional)</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="registro-rol">Tipo de cuenta <span class="required">*</span></label>
+                                <select id="registro-rol" name="rol" required>
+                                    <option value="cliente">Cliente</option>
+                                    <option value="empleado">Empleado</option>
+                                    <option value="admin">Administrador</option>
+                                </select>
+                                <small id="rol-info" class="info-text">Los roles de empleado y administrador requieren autorización.</small>
+                            </div>
+                            <div class="form-group" id="codigo-autorizacion-container" style="display: none;">
+                                <label for="codigo-autorizacion">Código de autorización <span class="required">*</span></label>
+                                <input type="text" id="codigo-autorizacion" name="codigo_autorizacion">
+                                <small>Ingresa el código proporcionado por la empresa para roles especiales.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="registro-password">Contraseña <span class="required">*</span></label>
+                                <div class="password-wrapper">
+                                   <input type="password" id="registro-password" name="password" required>
+                                       <button type="button" class="toggle-password" aria-label="Mostrar contraseña">
+                                           <i class="fas fa-eye"></i>
+                                       </button>
+                                   </div>
+                               </div>
+                            <div class="form-group">
+                                <label for="registro-confirm-password">Confirmar Contraseña <span class="required">*</span></label>
+                                <div class="password-wrapper">
+                                   <input type="password" id="registro-confirm-password" name="confirm_password" required>
+                                   <button type="button" class="toggle-password" aria-label="Mostrar contraseña">
+                                   <i class="fas fa-eye"></i>
+                                   </button>
+                                   </div>
+                               </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terminos" name="terminos" required>
+                                <label for="terminos">Acepto los <a href="#">términos y condiciones</a></label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="boton-cuenta">Registrarse</button>
+                            </div>
+                            <div class="form-links">
+                                <p class="login-link">¿Ya tienes cuenta? <a href="#" id="mostrar-login">Inicia sesión aquí</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2024 Casa Muebla Carpintería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Script principal -->
+    <script src="./js/script.js"></script>
+    <!-- Script específico para la página de Mi Cuenta -->
+    <script src="./js/mi-cuenta.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <!-- Enlace a la biblioteca de iconos de FontAwesome -->
+    <script src="https://kit.fontawesome.com/c499d04190.js" crossorigin="anonymous"></script>
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Casa Muebla Carpintería - Contacto</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu siderbarOpen'></i>
+                <span class="logo navLogo"><img src="./images/logo sin fondo.png" alt="">
+                </span>
+            
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><img src="./images/logo sin fondo.png" alt=""><a href="index.html"></a>
+                        </span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+    
+                    <ul class="nav-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./mi-cuenta.html">Mi Cuenta</a></li>
+                    </ul>
+                </div>
+    
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+    
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Buscar...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner de la página Contacto -->
+    <section class="banner-contacto">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Contacto</h1>
+            <p>Estamos aquí para ayudarte con tu próximo proyecto</p>
+        </div>
+    </section>
+
+    <!-- Sección de Información de Contacto y Formulario -->
+    <section class="contacto-principal">
+        <div class="container__contacto container__card-primary div__offset">
+            <div class="contacto-content card__primary">
+                <div class="text__contacto text__card-primary">
+                    <p>PONTE EN CONTACTO</p>
+                    <h1>¿Cómo Podemos Ayudarte?</h1>
+                </div>
+                <div class="contacto-grid">
+                    <div class="contacto-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Dirección</h3>
+                                <p>Av. Siempreviva 742, Springfield</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h3>Teléfono</h3>
+                                <p>+54 11 1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@casamueblacarpinteria.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Horario de Atención</h3>
+                                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                                <p>Sábados: 9:00 - 13:00</p>
+                            </div>
+                        </div>
+                        <div class="redes-sociales">
+                            <h3>Síguenos en Redes Sociales</h3>
+                            <div class="redes-iconos">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacto-formulario">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form id="formulario-contacto" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto <span class="required">*</span></label>
+                                <input type="text" id="asunto" name="asunto" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="servicio">Servicio de Interés</label>
+                                <select id="servicio" name="servicio">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="muebles">Muebles a Medida</option>
+                                    <option value="renovaciones">Renovaciones</option>
+                                    <option value="diseno">Diseño de Interiores</option>
+                                    <option value="comercial">Proyectos Comerciales</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje <span class="required">*</span></label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terminos" name="terminos" required>
+                                <label for="terminos">Acepto la política de privacidad y términos de servicio <span class="required">*</span></label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Mapa -->
+    <section class="mapa-ubicacion">
+        <div class="container__mapa container__card-primary div__offset">
+            <div class="mapa-content card__primary">
+                <div class="text__mapa text__card-primary">
+                    <p>NUESTRA UBICACIÓN</p>
+                    <h1>Encuéntranos Aquí</h1>
+                </div>
+                <div class="mapa-iframe">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168878895484!2d-58.38375908495731!3d-34.60373446500665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1626889174693!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación de Casa Muebla Carpintería"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Preguntas Frecuentes -->
+    <section class="preguntas-frecuentes">
+        <div class="container__faq container__card-primary div__offset">
+            <div class="faq-content card__primary">
+                <div class="text__faq text__card-primary">
+                    <p>DUDAS COMUNES</p>
+                    <h1>Preguntas Frecuentes</h1>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>¿Cuánto tiempo tarda en completarse un proyecto?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>El tiempo de ejecución varía según la complejidad y tamaño del proyecto. Un mueble individual puede tomar entre 2-4 semanas, mientras que proyectos más grandes como renovaciones completas pueden llevar 6-8 semanas. Durante la consulta inicial, te proporcionaremos un cronograma detallado.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>¿Ofrecen garantía en sus trabajos?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Sí, todos nuestros trabajos cuentan con una garantía de 2 años que cubre defectos de fabricación y materiales. Estamos comprometidos con la calidad y la satisfacción del cliente.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>¿Cuál es el proceso de pago?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Generalmente solicitamos un 50% de anticipo al iniciar el proyecto y el 50% restante al finalizar la instalación. Para proyectos grandes, podemos establecer un plan de pagos por etapas.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>¿Trabajan con materiales específicos que yo proporcione?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Sí, podemos trabajar con materiales proporcionados por el cliente, siempre que cumplan con nuestros estándares de calidad. También ofrecemos asesoramiento sobre la selección de materiales adecuados para cada proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Llamada a la Acción -->
+    <section class="cta">
+        <div class="contenedor">
+            <h2>¿Listo para Comenzar tu Proyecto?</h2>
+            <p>Contáctanos hoy mismo y convierte tus ideas en realidad.</p>
+            <a href="#formulario-contacto" class="boton">Enviar Mensaje Ahora</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2024 Casa Muebla Carpintería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="./js/script.js"></script>
+    <script>
+        // Script para el acordeón de preguntas frecuentes
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

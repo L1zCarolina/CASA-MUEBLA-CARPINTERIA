@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <!-- Enlace a la biblioteca de iconos de FontAwesome -->
+    <script src="https://kit.fontawesome.com/c499d04190.js" crossorigin="anonymous"></script>
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Casa Muebla Carpintería - Panel de Empleado</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu siderbarOpen'></i>
+                <span class="logo navLogo"><img src="./images/logo sin fondo.png" alt="">
+                </span>
+            
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><img src="./images/logo sin fondo.png" alt=""><a href="index.html"></a>
+                        </span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+    
+                    <ul class="nav-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./mi-cuenta.html">Mi Cuenta</a></li>
+                    </ul>
+                </div>
+    
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+    
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Buscar...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner del Panel de Empleado -->
+    <section class="banner-cuenta">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Panel de Empleado</h1>
+            <p id="banner-subtitle">Gestiona pedidos y productos</p>
+        </div>
+    </section>
+
+    <!-- Panel de Empleado -->
+    <section id="panel-empleado" class="panel-admin">
+        <div class="container__panel container__card-primary div__offset">
+            <div class="panel-content card__primary">
+                <div class="panel-header">
+                    <div class="text__panel text__card-primary">
+                        <p>PANEL DE EMPLEADO</p>
+                        <h1>Gestión de Operaciones</h1>
+                    </div>
+                    <div id="nombre-usuario-container">
+                        Bienvenido, <span id="nombre-usuario"></span>
+                    </div>
+                    <button id="btn-logout" class="boton-logout">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </button>
+                </div>
+                
+                <!-- Menú de navegación del panel -->
+                <div class="panel-nav">
+                    <button class="panel-nav-btn active" data-section="dashboard">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </button>
+                    <button class="panel-nav-btn" data-section="productos">
+                        <i class="fas fa-box"></i> Productos
+                    </button>
+                    <button class="panel-nav-btn" data-section="pedidos">
+                        <i class="fas fa-shopping-cart"></i> Pedidos
+                    </button>
+                    <button class="panel-nav-btn" data-section="cotizaciones">
+                        <i class="fas fa-file-invoice-dollar"></i> Cotizaciones
+                    </button>
+                    <button class="panel-nav-btn" data-section="perfil">
+                        <i class="fas fa-user"></i> Mi Perfil
+                    </button>
+                </div>
+                
+                <!-- Contenido de las secciones -->
+                <div class="panel-sections">
+                    <!-- Dashboard -->
+                    <div class="panel-section active" id="dashboard">
+                        <h2>Dashboard</h2>
+                        <div class="dashboard-cards">
+                            <div class="dashboard-card">
+                                <i class="fas fa-box"></i>
+                                <h3>Productos</h3>
+                                <p class="count">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h3>Pedidos</h3>
+                                <p class="count">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <h3>Cotizaciones</h3>
+                                <p class="count">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-summary">
+                            <div class="summary-card">
+                                <h3>Actividad Reciente</h3>
+                                <ul class="activity-list">
+                                    <li>
+                                        <span class="activity-time">Hoy, 10:30</span>
+                                        <span class="activity-text">Nuevo pedido creado (#1234)</span>
+                                    </li>
+                                    <li>
+                                        <span class="activity-time">Ayer, 15:45</span>
+                                        <span class="activity-text">Cotización respondida (#C002)</span>
+                                    </li>
+                                    <li>
+                                        <span class="activity-time">Ayer, 11:20</span>
+                                        <span class="activity-text">Producto actualizado (Mesa de Roble)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="summary-card">
+                                <h3>Pedidos Pendientes</h3>
+                                <ul class="pending-list">
+                                    <li>
+                                        <span class="pending-id">#1234</span>
+                                        <span class="pending-client">Juan Pérez</span>
+                                        <span class="pending-status">En proceso</span>
+                                    </li>
+                                    <li>
+                                        <span class="pending-id">#1233</span>
+                                        <span class="pending-client">María López</span>
+                                        <span class="pending-status">Pendiente</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gestión de Productos -->
+                    <div class="panel-section" id="productos">
+                        <h2>Gestión de Productos</h2>
+                        <form id="formulario-producto" class="panel-form">
+                            <div class="form-group">
+                                <label for="nombre_producto">Nombre del Producto:</label>
+                                <input type="text" id="nombre_producto" name="nombre_producto" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion">Descripción:</label>
+                                <textarea id="descripcion" name="descripcion" required></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="precio">Precio:</label>
+                                    <input type="number" id="precio" name="precio" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stock">Stock:</label>
+                                    <input type="number" id="stock" name="stock" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="categoria">Categoría:</label>
+                                <select id="categoria" name="categoria" required>
+                                    <option value="">Seleccionar categoría</option>
+                                    <!-- Las categorías se cargarán dinámicamente -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="imagen_producto">Imagen del Producto:</label>
+                                <input type="file" id="imagen_producto" name="imagen_producto" accept="image/*">
+                            </div>
+                            <button type="submit" class="boton-panel">Agregar Producto</button>
+                        </form>
+                        <div class="panel-table-container">
+                            <h3>Productos Registrados</h3>
+                            <div id="lista-productos" class="panel-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Descripción</th>
+                                            <th>Precio</th>
+                                            <th>Stock</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Los datos se cargarán dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gestión de Pedidos -->
+                    <div class="panel-section" id="pedidos">
+                        <h2>Gestión de Pedidos</h2>
+                        <div class="pedidos-filtro">
+                            <select id="filtro-estado" class="filtro-select">
+                                <option value="todos">Todos los pedidos</option>
+                                <option value="pendiente">Pendientes</option>
+                                <option value="en_proceso">En proceso</option>
+                                <option value="completado">Completados</option>
+                                <option value="cancelado">Cancelados</option>
+                            </select>
+                            <div class="buscar-pedido">
+                                <input type="text" id="buscar-pedido" placeholder="Buscar pedido...">
+                                <button class="btn-buscar"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="panel-table-container">
+                            <h3>Pedidos Registrados</h3>
+                            <div id="lista-pedidos" class="panel-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Cliente</th>
+                                            <th>Fecha</th>
+                                            <th>Estado</th>
+                                            <th>Total</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Los datos se cargarán dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gestión de Cotizaciones -->
+                    <div class="panel-section" id="cotizaciones">
+                        <h2>Gestión de Cotizaciones</h2>
+                        <div class="cotizaciones-filtro">
+                            <select id="filtro-estado-cotizacion" class="filtro-select">
+                                <option value="todos">Todas las cotizaciones</option>
+                                <option value="pendiente">Pendientes</option>
+                                <option value="procesada">Procesadas</option>
+                                <option value="rechazada">Rechazadas</option>
+                            </select>
+                            <div class="buscar-cotizacion">
+                                <input type="text" id="buscar-cotizacion" placeholder="Buscar cotización...">
+                                <button class="btn-buscar"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="panel-table-container">
+                            <h3>Cotizaciones Solicitadas</h3>
+                            <div id="lista-cotizaciones" class="panel-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Cliente</th>
+                                            <th>Tipo de Mueble</th>
+                                            <th>Fecha</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Los datos se cargarán dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mi Perfil -->
+                    <div class="panel-section" id="perfil">
+                        <h2>Mi Perfil</h2>
+                        <div class="perfil-container">
+                            <div class="perfil-info">
+                                <div class="perfil-avatar">
+                                    <img id="foto-perfil" src="/placeholder.svg?height=150&width=150" alt="Avatar de usuario">
+                                    <label for="nueva-foto" class="cambiar-avatar">
+                                        <i class="fas fa-camera"></i>
+                                        <input type="file" id="nueva-foto" name="foto_perfil" accept="image/*" style="display: none;">
+                                    </label>
+                                </div>
+                                <div class="perfil-detalles">
+                                    <h3 id="nombre-empleado">Nombre del Empleado</h3>
+                                    <p id="email-empleado">email@ejemplo.com</p>
+                                    <p id="rol-empleado">Rol: Empleado</p>
+                                    <p id="fecha-registro">Empleado desde: 15/03/2024</p>
+                                </div>
+                            </div>
+                            
+                            <div class="perfil-editar">
+                                <h3>Editar Información Personal</h3>
+                                <form id="form-editar-perfil" class="panel-form">
+                                    <div class="form-group">
+                                        <label for="editar-nombre">Nombre:</label>
+                                        <input type="text" id="editar-nombre" name="nombre_usuario" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="editar-email">Email:</label>
+                                        <input type="email" id="editar-email" name="email_usuario" required>
+                                    </div>
+                                    <button type="submit" class="boton-panel">Guardar Cambios</button>
+                                </form>
+                                
+                                <h3>Cambiar Contraseña</h3>
+                                <form id="form-cambiar-password" class="panel-form">
+                                    <div class="form-group">
+                                        <label for="password-actual">Contraseña Actual:</label>
+                                        <input type="password" id="password-actual" name="password_actual" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password-nueva">Nueva Contraseña:</label>
+                                        <input type="password" id="password-nueva" name="password_nueva" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password-confirmar">Confirmar Contraseña:</label>
+                                        <input type="password" id="password-confirmar" name="password_confirmar" required>
+                                    </div>
+                                    <button type="submit" class="boton-panel">Cambiar Contraseña</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2024 Casa Muebla Carpintería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Script principal -->
+    <script src="./js/script.js"></script>
+    <!-- Script específico para el panel de empleado -->
+    <script src="./js/empleado-panel.js"></script>
+</body>
+</html>

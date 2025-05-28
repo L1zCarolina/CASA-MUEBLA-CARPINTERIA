@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/productos-admin.css">
+
+    <!-- Enlace a la biblioteca de iconos de FontAwesome -->
+    <script src="https://kit.fontawesome.com/c499d04190.js" crossorigin="anonymous"></script>
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Casa Muebla Carpintería - Panel de Administración</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu siderbarOpen'></i>
+                <span class="logo navLogo"><img src="./images/logo sin fondo.png" alt="">
+                </span>
+            
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><img src="./images/logo sin fondo.png" alt=""><a href="index.html"></a>
+                        </span>
+                        <i class='bx bx-x siderbarClose'></i>
+                    </div>
+    
+                    <ul class="nav-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+                    </ul>
+                </div>
+    
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+    
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Buscar...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner del Panel de Administración -->
+    <section class="banner-cuenta">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Panel de Administración</h1>
+            <p id="banner-subtitle">Gestiona todos los aspectos del sistema</p>
+        </div>
+    </section>
+
+    <!-- Panel de Administración -->
+    <section id="panel-admin" class="panel-admin">
+        <div class="container__panel container__card-primary div__offset">
+            <div class="panel-content card__primary">
+                <div class="panel-header">
+                    <div class="text__panel text__card-primary">
+                        <p>PANEL DE ADMINISTRACIÓN</p>
+                        <h1>Gestión del Sistema</h1>
+                    </div>
+                    <button id="btn-logout" class="boton-logout">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </button>
+                </div>
+                
+                <!-- Menú de navegación del panel -->
+                <div class="panel-nav">
+                    <button class="panel-nav-btn active" data-section="dashboard">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </button>
+                    <button class="panel-nav-btn" data-section="usuarios">
+                        <i class="fas fa-users"></i> Usuarios
+                    </button>
+                    <button class="panel-nav-btn" data-section="productos">
+                        <i class="fas fa-box"></i> Productos
+                    </button>
+                    <button class="panel-nav-btn" data-section="pedidos">
+                        <i class="fas fa-shopping-cart"></i> Pedidos
+                    </button>
+                    <button class="panel-nav-btn" data-section="clientes">
+                        <i class="fas fa-user-tie"></i> Clientes
+                    </button>
+                    <button class="panel-nav-btn" data-section="proveedores">
+                        <i class="fas fa-truck"></i> Proveedores
+                    </button>
+                </div>
+                
+                <!-- Contenido de las secciones -->
+                <div class="panel-sections">
+                    <!-- Dashboard -->
+                    <div class="panel-section active" id="dashboard">
+                        <h2>Dashboard</h2>
+                        <div class="dashboard-cards">
+                            <div class="dashboard-card">
+                                <i class="fas fa-users"></i>
+                                <h3>Usuarios</h3>
+                                <p class="count">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <i class="fas fa-box"></i>
+                                <h3>Productos</h3>
+                                <p class="count">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h3>Pedidos</h3>
+                                <p class="count">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <i class="fas fa-user-tie"></i>
+                                <h3>Clientes</h3>
+                                <p class="count">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <i class="fas fa-truck"></i>
+                                <h3>Proveedores</h3>
+                                <p class="count">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-summary">
+                            <div class="summary-card">
+                                <h3>Actividad Reciente</h3>
+                                <ul class="activity-list">
+                                    <li>
+                                        <span class="activity-time">Hoy, 10:30</span>
+                                        <span class="activity-text">Nuevo pedido creado (#1234)</span>
+                                    </li>
+                                    <li>
+                                        <span class="activity-time">Ayer, 15:45</span>
+                                        <span class="activity-text">Cliente nuevo registrado</span>
+                                    </li>
+                                    <li>
+                                        <span class="activity-time">Ayer, 11:20</span>
+                                        <span class="activity-text">Producto actualizado (Mesa de Roble)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="summary-card">
+                                <h3>Pedidos Pendientes</h3>
+                                <ul class="pending-list">
+                                    <li>
+                                        <span class="pending-id">#1234</span>
+                                        <span class="pending-client">Juan Pérez</span>
+                                        <span class="pending-status">En proceso</span>
+                                    </li>
+                                    <li>
+                                        <span class="pending-id">#1233</span>
+                                        <span class="pending-client">María López</span>
+                                        <span class="pending-status">Pendiente</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gestión de Usuarios -->
+                    <div class="panel-section" id="usuarios">
+                        <h2>Gestión de Usuarios</h2>
+                        <form id="formulario-usuario" class="panel-form">
+                            <div class="form-group">
+                                <label for="nombre_usuario">Nombre de Usuario:</label>
+                                <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_usuario">Email:</label>
+                                <input type="email" id="email_usuario" name="email_usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password_usuario">Contraseña:</label>
+                                <input type="password" id="password_usuario" name="password_usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rol_usuario">Rol:</label>
+                                <select id="rol_usuario" name="rol_usuario" required>
+                                    <option value="admin">Administrador</option>
+                                    <option value="empleado">Empleado</option>
+                                    <option value="cliente">Cliente</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="boton-panel">Registrar Usuario</button>
+                        </form>
+                        <div class="panel-table-container">
+                            <h3>Usuarios Registrados</h3>
+                            <div id="lista-usuarios" class="panel-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Email</th>
+                                            <th>Rol</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Los datos se cargarán dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gestión de Productos MEJORADA -->
+                    <div class="panel-section" id="productos">
+                        <!-- Mensaje de estado -->
+                        <div id="mensaje-productos" class="mensaje-estado"></div>
+                        
+                        <div class="productos-header">
+                            <h2>Gestión de Productos</h2>
+                            <div class="productos-controles">
+                                <button id="btn-toggle-vista" class="boton-panel" style="background-color: #6c757d;">
+                                    <i class="fas fa-table"></i> Vista Tabla
+                                </button>
+                                <button onclick="exportarTablaExcel()" class="boton-panel" style="background-color: #28a745;">
+                                    <i class="fas fa-file-excel"></i> Exportar Excel
+                                </button>
+                                <button id="btn-nuevo-producto" class="boton-panel">
+                                    <i class="fas fa-plus"></i> Nuevo Producto
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Formulario de producto (inicialmente oculto) -->
+                        <div id="formulario-producto-container" class="panel-form" style="display: none;">
+                            <h3 id="formulario-titulo">Nuevo Producto</h3>
+                            <form id="formulario-producto" enctype="multipart/form-data">
+                                <input type="hidden" id="producto-id" name="id_producto">
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="nombre_producto">Nombre del Producto <span class="required">*</span></label>
+                                        <input type="text" id="nombre_producto" name="nombre_producto" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="categoria">Categoría <span class="required">*</span></label>
+                                        <select id="categoria" name="id_categoria" required>
+                                            <option value="">Seleccionar categoría</option>
+                                            <option value="1">Sillas</option>
+                                            <option value="2">Mesas</option>
+                                            <option value="3">Muebles de sala</option>
+                                            <option value="4">Muebles de comedor</option>
+                                            <option value="5">Muebles de dormitorio</option>
+                                            <option value="6">Muebles de oficina</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="descripcion">Descripción <span class="required">*</span></label>
+                                    <textarea id="descripcion" name="descripcion_producto" rows="3" required></textarea>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="precio">Precio <span class="required">*</span></label>
+                                        <input type="number" id="precio" name="precio" step="0.01" min="0" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="stock">Stock <span class="required">*</span></label>
+                                        <input type="number" id="stock" name="stock" min="0" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="imagen_producto">Imagen del Producto</label>
+                                    <input type="file" id="imagen_producto" name="imagen_producto" accept="image/*">
+                                    <span class="info-text">Formatos permitidos: JPG, JPEG, PNG. Tamaño máximo: 5MB</span>
+                                </div>
+                                
+                                <!-- Vista previa de imagen actual (solo en edición) -->
+                                <div id="imagen-actual-container" style="display: none;">
+                                    <label>Imagen Actual:</label>
+                                    <div id="imagen-actual-preview"></div>
+                                </div>
+                                
+                                <!-- Vista previa de nueva imagen -->
+                                <div id="imagen-preview" class="imagen-preview"></div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" id="btn-guardar-producto" class="boton-panel">
+                                        <i class="fas fa-save"></i> Guardar Producto
+                                    </button>
+                                    <button type="button" id="btn-cancelar-producto" class="boton-panel" style="background-color: #6c757d; margin-left: 10px;">
+                                        <i class="fas fa-times"></i> Cancelar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Filtros y búsqueda -->
+                        <div id="productos-filtros" class="filtros-container">
+                            <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                                <div style="flex: 1; min-width: 200px;">
+                                    <input type="text" id="buscar-producto" placeholder="Buscar productos..." 
+                                           style="width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 5px;">
+                                </div>
+                                <div>
+                                    <select id="filtro-categoria" style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 5px;">
+                                        <option value="">Todas las categorías</option>
+                                        <option value="1">Sillas</option>
+                                        <option value="2">Mesas</option>
+                                        <option value="3">Muebles de sala</option>
+                                        <option value="4">Muebles de comedor</option>
+                                        <option value="5">Muebles de dormitorio</option>
+                                        <option value="6">Muebles de oficina</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select id="filtro-stock" style="padding: 8px 12px; border: 1px solid #ddd; border-radius: 5px;">
+                                        <option value="">Todo el stock</option>
+                                        <option value="sin_stock">Sin stock</option>
+                                        <option value="poco_stock">Poco stock (≤10)</option>
+                                        <option value="con_stock">Con stock (>10)</option>
+                                    </select>
+                                </div>
+                                <button id="btn-limpiar-filtros" style="padding: 8px 15px; background: #6c757d; color: white; border: none; border-radius: 5px;">
+                                    <i class="fas fa-times"></i> Limpiar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Vista de Cards (por defecto) -->
+                        <div id="productos-cards" class="productos-grid">
+                            <!-- Las cards se cargarán dinámicamente -->
+                        </div>
+
+                        <!-- Vista de Tabla (oculta por defecto) -->
+                        <div id="productos-tabla-container" class="panel-table-container" style="display: none;">
+                            <h3>Productos Registrados</h3>
+                            <div id="lista-productos" class="panel-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="checkbox-header" style="width: 40px;">
+                                                <input type="checkbox" id="selectAll" onchange="seleccionarTodos()">
+                                            </th>
+                                            <th style="width: 60px;">ID</th>
+                                            <th style="width: 80px;">Imagen</th>
+                                            <th style="width: 150px;">Nombre</th>
+                                            <th style="width: 200px;">Descripción</th>
+                                            <th style="width: 100px;">Precio</th>
+                                            <th style="width: 80px;">Stock</th>
+                                            <th style="width: 100px;">Categoría</th>
+                                            <th style="width: 120px;">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Los datos se cargarán dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gestión de Pedidos -->
+                    <div class="panel-section" id="pedidos">
+                        <h2>Gestión de Pedidos</h2>
+                        <form id="formulario-pedido" class="panel-form">
+                            <div class="form-group">
+                                <label for="id_cliente">Cliente:</label>
+                                <select id="id_cliente" name="id_cliente" required>
+                                    <option value="">Seleccionar cliente</option>
+                                    <!-- Los clientes se cargarán dinámicamente -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha_pedido">Fecha del Pedido:</label>
+                                <input type="date" id="fecha_pedido" name="fecha_pedido" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="estado_pedido">Estado:</label>
+                                <select id="estado_pedido" name="estado_pedido" required>
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="en_proceso">En Proceso</option>
+                                    <option value="completado">Completado</option>
+                                    <option value="cancelado">Cancelado</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="boton-panel">Crear Pedido</button>
+                        </form>
+                        <div class="panel-table-container">
+                            <h3>Pedidos Registrados</h3>
+                            <div id="lista-pedidos" class="panel-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Cliente</th>
+                                            <th>Fecha</th>
+                                            <th>Estado</th>
+                                            <th>Total</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Los datos se cargarán dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gestión de Clientes -->
+                    <div class="panel-section" id="clientes">
+                        <h2>Gestión de Clientes</h2>
+                        <form id="formulario-cliente" class="panel-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre_cliente">Nombre:</label>
+                                    <input type="text" id="nombre_cliente" name="nombre_cliente" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellido_cliente">Apellido:</label>
+                                    <input type="text" id="apellido_cliente" name="apellido_cliente" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_cliente">Email:</label>
+                                <input type="email" id="email_cliente" name="email_cliente" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono_cliente">Teléfono:</label>
+                                <input type="tel" id="telefono_cliente" name="telefono_cliente" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="direccion_cliente">Dirección:</label>
+                                <input type="text" id="direccion_cliente" name="direccion_cliente" required>
+                            </div>
+                            <button type="submit" class="boton-panel">Agregar Cliente</button>
+                        </form>
+                        <div class="panel-table-container">
+                            <h3>Clientes Registrados</h3>
+                            <div id="lista-clientes" class="panel-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Email</th>
+                                            <th>Teléfono</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Los datos se cargarán dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gestión de Proveedores -->
+                    <div class="panel-section" id="proveedores">
+                        <h2>Gestión de Proveedores</h2>
+                        <form id="formulario-proveedor" class="panel-form">
+                            <div class="form-group">
+                                <label for="nombre_proveedor">Nombre del Proveedor:</label>
+                                <input type="text" id="nombre_proveedor" name="nombre_proveedor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_proveedor">Email:</label>
+                                <input type="email" id="email_proveedor" name="email_proveedor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono_proveedor">Teléfono:</label>
+                                <input type="tel" id="telefono_proveedor" name="telefono_proveedor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="direccion_proveedor">Dirección:</label>
+                                <input type="text" id="direccion_proveedor" name="direccion_proveedor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo_material">Tipo de Material:</label>
+                                <select id="tipo_material" name="tipo_material" required>
+                                    <option value="">Seleccionar tipo</option>
+                                    <option value="madera">Madera</option>
+                                    <option value="metal">Metal</option>
+                                    <option value="vidrio">Vidrio</option>
+                                    <option value="textil">Textil</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="boton-panel">Agregar Proveedor</button>
+                        </form>
+                        <div class="panel-table-container">
+                            <h3>Proveedores Registrados</h3>
+                            <div id="lista-proveedores" class="panel-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Email</th>
+                                            <th>Teléfono</th>
+                                            <th>Tipo</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Los datos se cargarán dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2024 Casa Muebla Carpintería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Script principal -->
+    <script src="./js/script.js"></script>
+    <!-- Script específico para el panel de administración -->
+    <script src="./js/admin-panel.js"></script>
+</body>
+</html>
